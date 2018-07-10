@@ -11,3 +11,9 @@
 
 ### git status
 **查看本地 git 状态**
+
+
+### git 安装
+https://github.com/xiezongnan/Summarize/blob/master/Git/Git%202.17.0%20Setup.md
+
+[git 安装](https://github.com/xiezongnan/Summarize/blob/master/Git/Git%202.17.0%20Setup.md)
