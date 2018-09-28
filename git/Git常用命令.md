@@ -9,11 +9,14 @@ git config --global user.name "Your Name"
 git config --global user.email "email@example.com"
 ```
 
+### 常用命令
+
+
 [参考文档](https://www.toutiao.com/i6604018327293526532/)
 
 [git 安装](https://github.com/xiezongnan/Summarize/blob/master/Git/Git%202.17.0%20Setup.md)
 
-### 常用命令
+
 ```
 将当前的目录初始化为git仓库
 git init
