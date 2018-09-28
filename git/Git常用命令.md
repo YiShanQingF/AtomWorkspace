@@ -12,12 +12,15 @@ git config --global user.email "email@example.com"
 
 ### 常用命令
 ```
-git init
 将当前的目录初始化为git仓库
+git init
+新建一个目录，将其初始化为Git代码库
+git init [project-name]
 ```
 
 ```
 git add fileName
+git add .
 将文件提交至暂存区
 ```
 
@@ -142,12 +145,14 @@ git branch --set-upstream-to=origin/dev dev
 推送分支就是把该分支上所有本地提交到远程库中，推送时，要指定本地分支，这样，Git就会把该分支推送到远程库对应的远程分支
 git push origin master
 git push origin dev
-
 git push
-
 ```
 
-
+#### 删除远程分支
+```
+git push origin --delete [branch-name]
+git branch -dr [remote/branch]
+```
 
 
 
