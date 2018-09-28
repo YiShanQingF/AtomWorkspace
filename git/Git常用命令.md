@@ -1,5 +1,14 @@
 # Git 常用命令
 
+![](http://p1.pstatp.com/large/pgc-image/153761776465798a2409144)
+
+
+```
+配置姓名和邮箱
+git config --global user.name "Your Name"
+git config --global user.email "email@example.com"
+```
+
 
 ### 常用命令
 ```
