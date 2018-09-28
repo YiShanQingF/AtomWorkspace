@@ -66,6 +66,8 @@ git branch dev
 git checkout dev
 删除 dev 分支
 git branch -d dev
+当本地分支有内容没有推送到, 远程绑定的分支时
+git branch -D dev
 查看本地所有分支
 git branch
 查看所有分支(包括远程)
