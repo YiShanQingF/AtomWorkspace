@@ -95,15 +95,15 @@ git merge –no-ff -m “注释” dev
     	直接从 dev 分支切换 master 分支, 再创建 fix-bug 分支, 会将当前未开发完成的代码,带到新的 fix-bug 分支上.
     	正确做法: 把 dev 分支上未提交的代码 add 再隐藏, 再切换 master 分支, 再创建 fix-bug 分支, 修复 bug 提交代码, 然后将 fix-bug 分支合并 master 分支.
 ```
-	隐藏工作修改内容
-	git stash
-	查看隐藏区内容
-	git stash list
-	1.git stash apply恢复，恢复后，stash内容并不删除，你需要使用命令git stash drop来删除。
-	2.另一种方式是使用git stash pop,恢复的同时把stash内容也删除了。
-	git stash pop
-	删除隐藏区内容
-	git stash drop
+隐藏工作修改内容
+git stash
+查看隐藏区内容
+git stash list
+1.git stash apply恢复，恢复后，stash内容并不删除，你需要使用命令git stash drop来删除。
+2.另一种方式是使用git stash pop,恢复的同时把stash内容也删除了。
+git stash pop
+删除隐藏区内容
+git stash drop
 ```
 
 
@@ -119,51 +119,57 @@ git remote
 git remote –v
 ```
 
+#### 克隆&切换远程仓库
 ```
 克隆远程仓库到本机
 git clone
-
-远程与本地仓库关联
-git remote add origin https://github.com/tugenhua0707/testgit.git
-第一次推送master分支时，加上了 –u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令(git push origin master)
-git push -u origin master
+```
+```
+方法一
+git remote remove origin
+git remote add origin git@192.168.8.121:/home/git/gitrepo/AtomWorkspace.git/
+方法二
+git remote set-url origin git@192.168.8.121:/home/git/gitrepo/AtomWorkspace.git/
 ```
 
-
-#### 拉取分支
+#### 拉取分支 pull
 ```
-从远程 dev 分支拉取,并创建本地 dev 分支
+从远程 dev 分支拉取,并创建本地 dev 分支, 并且将本地的 dev1 和远程的 dev1 关联
 git checkout -b dev origin/dev
+
 拉取与本地分支关联的远程分支
 git pull
 将远程的 dev 分支代码拉取到本地 dev 分支上
 git pull origin/dev dev
+
 将本地的 dev 分支与远程的 dev 分支建立连接, 方便拉取代码(git pull) 和推送(git push)
 git branch --set-upstream-to=origin/dev dev
 ```
 
 
-#### 推送分支
+#### 推送分支 push
 ```
+将本地的 dev1 推送到远程 dev1 分支,并且将本地的 dev1 和远程的 dev1 关联
+git push --set-upstream origin dev1
+
+第一次推送master分支时，加上了 –u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令(git push origin master)
+git push -u origin master
+
+推送本地到远程与本地分支关联的分支
+git push
+
 推送分支就是把该分支上所有本地提交到远程库中，推送时，要指定本地分支，这样，Git就会把该分支推送到远程库对应的远程分支
 git push origin master
 git push origin dev
-git push
+
+将本地的 dev 分支与远程的 dev 分支建立连接, 方便拉取代码(git pull) 和推送(git push)
+git branch --set-upstream-to=origin/dev dev
 ```
 
 #### 删除远程分支
 ```
 git push origin --delete [branch-name]
-git branch -dr [remote/branch]
 ```
-
-
-
-#### 冲突问题
-
-
-
-
 
 
 
