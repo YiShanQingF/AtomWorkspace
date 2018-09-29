@@ -11,9 +11,9 @@ git config --global user.email "email@example.com"
 
 ### 常用命令
 
-
 [参考文档](https://www.toutiao.com/i6604018327293526532/)
 
+#### init & add & commit
 ```
 将当前的目录初始化为git仓库
 git init
@@ -66,14 +66,16 @@ git checkout -- fileName
 ```
 创建并切换 dev 分支
 git checkout -b dev
+
 创建 dev 分支
 git branch dev
 切换 dev 分支
 git checkout dev
+
 删除 dev 分支
 git branch -d dev
-当本地分支有内容没有推送到, 远程绑定的分支时
 git branch -D dev
+
 查看本地所有分支
 git branch
 查看所有分支(包括远程)
@@ -97,11 +99,14 @@ git merge –no-ff -m “注释” dev
 ```
 隐藏工作修改内容
 git stash
+
 查看隐藏区内容
 git stash list
+
 1.git stash apply恢复，恢复后，stash内容并不删除，你需要使用命令git stash drop来删除。
 2.另一种方式是使用git stash pop,恢复的同时把stash内容也删除了。
 git stash pop
+
 删除隐藏区内容
 git stash drop
 ```
@@ -134,7 +139,7 @@ git remote set-url origin git@192.168.8.121:/home/git/gitrepo/AtomWorkspace.git/
 
 #### 拉取分支 pull
 ```
-从远程 dev 分支拉取,并创建本地 dev 分支, 并且将本地的 dev1 和远程的 dev1 关联
+从远程 dev 分支拉取,并创建本地 dev 分支, 并且将本地的 dev 和远程的 dev 关联
 git checkout -b dev origin/dev
 
 拉取与本地分支关联的远程分支
