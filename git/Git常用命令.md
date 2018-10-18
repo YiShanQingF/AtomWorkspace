@@ -176,5 +176,14 @@ git branch --set-upstream-to=origin/dev dev
 git push origin --delete [branch-name]
 ```
 
+### 分支管理
 
 
+[git本地分支和远程分支如何关联](https://www.jianshu.com/p/d2fc2e212d1a)
+
+[git本地分支和远程分支如何关联](https://blog.csdn.net/cherishhere/article/details/52606884)
+
+https://blog.csdn.net/tterminator/article/details/78108550
+
+查看分支信息
+git branch -vv
