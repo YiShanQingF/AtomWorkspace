@@ -46,7 +46,7 @@ git diff fileName
 查看日志
 git log
 查看精简日志
-git log –pretty=oneline
+git log –-pretty=oneline
 查看所有日志 使用场景:当你回退到上一版本，这时用 git log 是看不到大于当前版本时间提交的记录，用 git reflog 是可以看到所有的日志记录
 git reflog
 ```
@@ -57,7 +57,10 @@ git reflog
 git reset --hard HEAD^
 回退到指定版本
 git reset --hard 版本号
+```
 
+
+```
 撤销工作区修改内容
 git checkout -- fileName
 ```
