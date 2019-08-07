@@ -11,7 +11,7 @@ git config --global user.email "email@example.com"
 
 ### 常用命令
 
-[参考文档](https://www.toutiao.com/i6604018327293526532/)
+[廖雪峰 Git 教程](https://www.liaoxuefeng.com/wiki/896043488029600)
 
 #### init & add & commit
 ```
@@ -45,7 +45,9 @@ git diff fileName
 ```
 查看日志
 git log
+查看精简日志
 git log –pretty=oneline
+查看所有日志 使用场景:当你回退到上一版本，这时用 git log 是看不到大于当前版本时间提交的记录，用 git reflog 是可以看到所有的日志记录
 git reflog
 ```
 
