@@ -20,7 +20,7 @@ cp /root/redis-5.0.2/redis.conf /usr/local/redis/redis.conf         复制配置
 vi redis.conf       修改配置文件
 daemonize no 修改为 daemonize yes
 /usr/local/redis/bin/redis-server /usr/local/redis/redis.conf
-
+https://www.cnblogs.com/xiangzideheiniu/p/12430364.html
 ```
 
 ### 基本文件介绍

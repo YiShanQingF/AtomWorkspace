@@ -42,7 +42,6 @@ Swap:  2097144k total,        0k used,  2097144k free,   839620k cached
 
 [官方文档](http://docs.oracle.com/cd/E11882_01/index.htm)
 
-
 ---
 
 ## 安装 jdk
@@ -380,6 +379,7 @@ netca /silent /responsefile /home/oracle/response/netca.rsp
 检验
 
 1、在 `/u01/app/oracle/product/11.2.0/db_1/network/admin/` 中生成 `listener.ora` 和 `sqlnet.ora`
+
 ```
 ll /u01/app/oracle/product/11.2.0/db_1/network/admin/
 ```
@@ -523,7 +523,7 @@ service iptables restart
 
 `sqlplus /nolog`        登陆 sqlplus
 
-`startup`               启动数据库
+`startup;`               启动数据库
 
 `conn /as sysdba`       用 sysdba 登陆数据库
 
